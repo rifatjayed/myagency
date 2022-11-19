@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* Nav Menu Strat */
+
+
+nav {
+    background: #fff;
+    min-height: 100vh;
+    font-family: Montserrat;
+    position: relative;
+}
+.btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+
+.btn span {
+    width: 20px;
+    height: 2px;
+    background: #000;
+    display: flex;
+    position: absolute;
+    transition: .3s;
+
+}
+
+.btn span:nth-child(1) {
+    top: 20%;
+}
+
+.btn span:nth-child(2) {
+    top: 80%;
+}
+
+.btn.is-active span {
+    background: #fff;
+}
+
+.btn.is-active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(-45deg);
+
+}
+
+.btn.is-active span:nth-child(2) {
+    top: 50%;
+    transform: rotate(45deg);
+
+}
+
+.menu {
+    background: black;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 100px;
+    z-index: 1;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.menuItem:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.menuLink {
+    position: relative;
+    display: inline-flex;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.menuLink::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    left: 0;
+    height: 5px;
+    display: inline-flex;
+    background: white;
+    transition: .3s;
+}
+
+.menuLink:hover:after {
+    width: 100%;
+}
+
+/* Nav Menu End */
+
+/* Hero Section Strar */
+.hero{
+    width: 100%;
+    height: 100vh;  
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.backVideo{
+    position: absolute;
+   width: 100%;
+    height: 100vh;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.hero-content{
+    font-family: Montserrat;
+    text-align: center;
+    color: #fff;
+    line-height: 64px;
+    margin: 30px 0;
+    padding: 0 15px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+
+/* Hero section end */
+
+
+.container{
+    margin: 50px 100px;
+}
+
+
+/* Service Section Strat */
+
+.sectionTitle{
+    font-family: Montserrat;
+font-weight: 500;
+color: black;
+font-size: 20px;
+margin-bottom: 20px;
+padding-left: 20px;
+border-left: 5px solid black;
+}
+
+.titleMain {
+    font-family: Montserrat;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: .01em;
+    color: black;
+}
+.ourService{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.serviceiItem{
+/* background-color: red; */
+width: 400px;
+height: 300px;
+margin: 15px;
+
+text-align: center;
+padding: 30px 20px;
+}
+.serviceiItem:hover{
+    background: #e6e6e6;
+ 
+}
+
+.servicesItem .icon img {
+    height: 75px;
+    text-align: center;
+}
+.serviceHeader{
+    font-family: Montserrat;
+    letter-spacing: 2.5px;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+p{
+    font-size: 20px;
+    color: #0009
+}
+/* Service Section End */
